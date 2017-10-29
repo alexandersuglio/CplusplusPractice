@@ -22,12 +22,14 @@ void GetStringLength(char * c, int *length);
 // PrintString - Just print the string in forward order using cout
 void PrintString(char * const c);
 
-/*
+ 
 // PrintStringBackwards - Print the string in reverse order using cout
 void PrintStringBackwards(char * const c);
-
+ 
 // Search the string for the test character. Return -1 if not found
 int FindIndexOfCharacter(char * c, char testVal);
+
+
 
 // Return a pointer to the character at the index given
 char * GetValueAtIndex(char * const c, int index);
@@ -35,6 +37,7 @@ char * GetValueAtIndex(char * const c, int index);
 // Return the ascii integer value of the character at requested index
 int GetIntegerValueOfIndex(char * c, int index);
 
+/*
 // Print the hexadecimal value of the character at the requested index
 void PrintHexValueAtIndex(char * c, int index);
 
@@ -88,8 +91,10 @@ int main()
 	//int bPrints = 0;
 	//int lengthChecks = 0;
 
+	char test = 'X';
+	int index = 0;
 
-	//
+
 	int length = 0;
 	// Your code below
 	// =========================
@@ -100,15 +105,38 @@ int main()
 	cout << "\n";
 	cout << "Done=========" << endl;
 
-
 	cout << "length of ";
 	PrintString(pc);
 	GetStringLength(pc, &length);
-	cout << " is the length of " << length << endl;
+	cout << " is " << length << endl;
 	cout << endl;
+
+	cout << "Backwards======\n";
+	PrintStringBackwards(pc);
+	cout << "\n";
+	cout << "Done=========" << endl;
+	
+	FindIndexOfCharacter(pc, test);
+	cout << test << " index " << index << endl;
+
+	test = 'a';
+	index = 0;
+	FindIndexOfCharacter(pc, test);
+	cout << test << " index " << index << endl;
+	
+
+
+
+
+
+
+
+
+	//GetValueAtIndex(char * const c, int index);
+	//GetIntegerValueOfIndex(char * c, int index);
 	cin.get();
 
-		
+
 	
 
 
@@ -131,8 +159,8 @@ void ReadString(char * c, int maxLength)
 	cout << "Enter a string less than " << maxLength << " characters." << endl;
 	// Your code here
 	// ==============================
-
-	cin >> c;
+ 
+	cin.getline(c, 80, '\n');
 
 	// ==============================
 }
@@ -142,25 +170,8 @@ void ReadString(char * c, int maxLength)
 void GetStringLength(char * c, int *length)
 {
 //*length = static_cast<string>(c).length(); 
-
-	//length;
 		
 *length = strlen(c);
-
-//cout << *length;
-//cout << length;
-	//*lengthptr = 69;
-
-
-
-
-	//*c = c[0];
-
-	//cout << *c;
-//cout << *length;
-	//*length = c.length();
-
-	
 
 }
 
@@ -176,34 +187,64 @@ void PrintString(char * const c) {
 
 }
 
-/*
+
 void PrintStringBackwards(char * const c) {
+
+	for (int i = static_cast<string>(c).length(); i >= 0; i--) {
+		cout << c[i];
+	}
 
 }
 
 // Search the string for the test character. Return -1 if not found
 int FindIndexOfCharacter(char * c, char testVal) {
+	
+	for (int i = 0; i < static_cast<string>(c).length(); i++) {
+		
+		/*
+		if (testVal == c[i]){
+			return c[i];
+			//cout << "I love ruby ";
+		}
+		else {
+			return -1;
+		}
+		*/
+			return 13;
+	}
 
+	//return 0;
 
 }
+
 
 // Return a pointer to the character at the index given
 char * GetValueAtIndex(char * const c, int index) {
 
+	return "a";
 
 }
 
 // Return the ascii integer value of the character at requested index
 int GetIntegerValueOfIndex(char * c, int index) {
 
-
+	return 6;
 }
 
+
+
+
+
+
+/*
 // Print the hexadecimal value of the character at the requested index
 void PrintHexValueAtIndex(char * c, int index) {
 
 
+
 }
+
+
 
 // Make the entire string uppercase
 void MakeUpperCase(char * c) {
