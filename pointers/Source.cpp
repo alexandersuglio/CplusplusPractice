@@ -184,26 +184,8 @@ return -1;
 
 // Return a pointer to the character at the index given
 char * GetValueAtIndex(char * const c, int index) {
-	cout << "ruby";
-
-
-	//for (int i = 0; i < strlen(c); i++) {
-	//if (c[index] == )
-	//	char p = c;
-		return c;
-	//}
-
-
-
-//int i = 0;
-//char *p = c;
-//while (i++ != index)
-//	p++;
-//for (int i = 0; i < strlen(c); i++)
-//if (c[i] == index)
-//<string>(p);
-//return p;
-	
+	char * cPtr = &c[index];
+	return cPtr;	
 }
 
 // Return the ascii integer value of the character at requested index
