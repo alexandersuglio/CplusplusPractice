@@ -7,6 +7,8 @@ int factorial(int n);
 
 int factorialIter(int );
 
+void func();
+
 int main() {
 
 	for (int i = 0; i <= 10; i++) {
@@ -61,6 +63,17 @@ int main() {
 	}
 
 
+
+	cout << endl << "-------Static example-------" << endl;
+
+	cout << "Calling Function :- " << endl;
+	func();
+	cout << "Calling Function :- " << endl;
+	func();
+	cout << "Calling Function :- " << endl;
+	func();
+	//return 0;
+
 	cin.get();
 	cin.get();
 }
@@ -99,4 +112,14 @@ int factorialIter(int number) {
 
 	}
 	return result;
+}
+
+void func() {
+ static int count = 0;
+	/* value of 'count' persist between function calls
+	* i.e count doesn't become 0 every time func() is called;
+	* previous value of count remains alive
+	*/
+	count++;
+	cout << "Function is called " << count << " times " << endl;
 }
