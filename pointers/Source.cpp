@@ -102,13 +102,15 @@ cout << oldChar << "-->" << newChar << "\n";
 cPtr = GetValueAtIndex(pc, index);
 *cPtr = newChar;
 PrintString(pc);
-cout << endl;	
+cout << endl;
+	
 
 for (int i = 0; i < length; ++i)
 {
 int i_ascii = GetIntegerValueOfIndex(pc, i);
 cout << pc[i] << "=" << i_ascii << endl;
-}
+}
+
 for (int i = 0; i < length; ++i)
 {
 cout << "hex: ";
