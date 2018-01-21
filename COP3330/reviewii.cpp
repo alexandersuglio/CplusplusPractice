@@ -26,7 +26,5 @@ if (a < 100){
   cout << "a is " << (100 - a) << " away from 100!" << endl;
 }
 
-
-
-
 }
+
