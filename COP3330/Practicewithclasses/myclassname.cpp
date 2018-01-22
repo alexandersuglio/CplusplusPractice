@@ -25,3 +25,7 @@ void myClassName::myName(string name)
      alias = name;
     cout << "my name is "<< getName() << endl;
   }
+
+void myClassName::addthreewithPTR(int *number){
+    *number = *number + 3;
+}

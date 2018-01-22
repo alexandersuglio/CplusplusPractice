@@ -13,15 +13,10 @@ using namespace std;
 class myClassName{
 public:
     string getName();
-//    {
-//             return alias;
- //   }
     
     void myName(string );
- //   {
-  //      alias = name;
-  //      cout << "my name is "<< getName() << endl;
-  //  }
+    
+    void addthreewithPTR(int *);
     
 private:
     string alias;
